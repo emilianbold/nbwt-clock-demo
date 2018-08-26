@@ -1,6 +1,14 @@
 <html>
     <body>
         Hello HTML world!
+        <p>
+            <input type="radio" name="cityGroup" value="Europe/London" data-bind="checked: city">London
+            <input type="radio" name="cityGroup" value="Europe/Paris" data-bind="checked: city"/>Paris
+            <input type="radio" name="cityGroup" value="Asia/Tokyo" data-bind="checked: city"/>Tokyo
+
+
         <div data-bind="text: clock">Is this thing on?</div>
+
+        <button data-bind="click: $root.currentLocale">Current time</button>
     </body>
 </html>
