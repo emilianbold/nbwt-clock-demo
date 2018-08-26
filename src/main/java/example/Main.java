@@ -34,6 +34,7 @@ public class Main {
                 }
             }), BorderLayout.SOUTH);
             f.setSize(800, 400);
+            f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             f.setVisible(true);
 
             //configure the panel
