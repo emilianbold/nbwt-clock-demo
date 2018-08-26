@@ -8,6 +8,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import net.java.html.json.Function;
 import net.java.html.json.Model;
+import net.java.html.json.ModelOperation;
 import net.java.html.json.Property;
 
 @Model(targetId = "", className = "ClockModel", properties = {
@@ -37,7 +38,8 @@ public class Clock {
         }, 0, 1000);
     }
 
-    private static void updateClock(ClockModel model) {
+    @ModelOperation
+    static void updateClock(ClockModel model) {
         Instant instant = Instant.now();
         ZoneId zoneId = ZoneId.of(model.getCity());
         ZonedDateTime zdt = ZonedDateTime.ofInstant(instant, zoneId);
