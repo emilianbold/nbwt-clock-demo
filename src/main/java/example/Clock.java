@@ -9,6 +9,7 @@ import java.util.TimerTask;
 import net.java.html.json.Function;
 import net.java.html.json.Model;
 import net.java.html.json.ModelOperation;
+import net.java.html.json.OnPropertyChange;
 import net.java.html.json.Property;
 
 @Model(targetId = "", className = "ClockModel", properties = {
@@ -17,6 +18,11 @@ import net.java.html.json.Property;
     @Property(name = "city", type = String.class)
 })
 public class Clock {
+
+    @OnPropertyChange("city")
+    static void cityChanged(ClockModel model) {
+        updateClock(model);
+    }
 
     @Function
     static void currentLocale(ClockModel model) {
