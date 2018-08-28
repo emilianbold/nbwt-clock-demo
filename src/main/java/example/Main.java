@@ -6,9 +6,9 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.JFXPanel;
-import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javax.swing.AbstractAction;
@@ -33,7 +33,7 @@ public class Main {
                     System.exit(0);
                 }
             }), BorderLayout.SOUTH);
-            f.setSize(800, 400);
+            f.setSize(800, 800);
             f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             f.setVisible(true);
 
@@ -44,7 +44,7 @@ public class Main {
                 stage.setTitle("");
                 stage.setResizable(true);
 
-                Group root = new Group();
+                StackPane root = new StackPane();
                 Scene scene = new Scene(root, 80, 20);
                 stage.setScene(scene);
 
